@@ -14,7 +14,7 @@ int main() {
    string name; // new "box" to hold a name in
    cout << "What's your name? ";
    cin >> name; // read in their answer
-   // finally, say hi to them
+   // Finally, say hi to them
    cout << "Well Hi, " << name << "!" << endl;
     return 0; // no errors
 }
