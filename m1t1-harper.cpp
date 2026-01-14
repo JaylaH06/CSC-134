@@ -12,7 +12,7 @@ int main() {
     cout << endl; // another new line
 
     /*
-    nest we will:
+    next we will:
     - make a variable (a noun) to store the user's name
     - ask them for the name
     - greet them by name
