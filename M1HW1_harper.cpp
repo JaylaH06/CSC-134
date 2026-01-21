@@ -18,9 +18,9 @@ int main() {
 
     cout << setprecision(2) << fixed;
     
-    cout << "My favorite quote from the movie is, 'I'll always love Ponyo whether she's a fish, a human... or in between. '" << endl;
-    cout << "My favorite scene is when Ponyo runs up to sosuke on the bridge and hugs him after changing into a human girl." << endl;
+    cout << "My favorite quote from the movie is, 'I'll always love Ponyo whether she's a fish, a human... or in between.'" << endl;
+    cout << "My favorite scene is when Ponyo runs up to Sosuke on the bridge and hugs him after changing into a human girl" << endl;
     cout << "One fun fact is that the movie was made with zero CGI usage" << endl;
-    cout << "Another fun fact is that the seaside town that 'Ponyo' takes place in is based on an actual town called Tomonoura in Japan." << endl;
+    cout << "Another fun fact is that the seaside town that 'Ponyo' takes place in is based on an actual town called Tomonoura in Japan" << endl;
 
 }
