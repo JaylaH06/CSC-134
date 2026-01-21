@@ -13,7 +13,7 @@ int main() {
     double movie_gross = 206.5;
 
     cout << setprecision(2) << fixed;
-    cout << My favorite quote from the movie is "I'll always love Ponyo whether she's a fish, a human... or in between"
+    cout << My favorite quote from the movie is 'I'll always love Ponyo whether she's a fish, a human... or in between'
     cout << My favorite scene from the movie is when Ponyo runs towards Sosuke to hug him on the road
 
 
