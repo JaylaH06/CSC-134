@@ -4,6 +4,7 @@
 // Jayla Harper
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -12,6 +13,8 @@ int main() {
     int item_count =2000;
     double item_cost = 1.39;
     double total_cost;
+
+    cout << setprecision(2) << fixed;
 
 
 
