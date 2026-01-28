@@ -43,6 +43,7 @@ int main() {
     profit = customer_price - cost;
 
     // Part 4 -- Print the Output
+    cout << setprecision(2) << fixed;
     cout << "==== CRATE INFO ====" << endl;
     cout << "Volume is " << volume << "cubic feet " << endl;
     cout << "Wholesale price is $" << cost << endl;
