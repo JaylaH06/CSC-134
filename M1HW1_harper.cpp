@@ -12,9 +12,15 @@ int main() {
     int movie_year = 2008;
     double movie_gross = 206.5;
 
-    cout << setprecision(2) << fixed;
-    cout << My favorite quote from the movie is 'I'll always love Ponyo whether she's a fish, a human... or in between'
-    cout << My favorite scene from the movie is when Ponyo runs towards Sosuke to hug him on the road
+    cout << "The movie I picked is called " << movie_name << endl;
+    cout << "It was made in " << movie_year << endl;
+    cout << "The total amount of money made was " << movie_gross << " billion" << endl;
 
+    cout << setprecision(2) << fixed;
+    
+    cout << "My favorite quote from the movie is, 'I'll always love Ponyo whether she's a fish, a human... or in between. '" << endl;
+    cout << "My favorite scene is when Ponyo runs up to sosuke on the bridge and hugs him after changing into a human girl." << endl;
+    cout << "One fun fact is that the movie was made with zero CGI usage" << endl;
+    cout << "Another fun fact is that the seaside town that 'Ponyo' takes place in is based on an actual town called Tomonoura in Japan." << endl;
 
 }
