@@ -28,11 +28,11 @@ int main() {
     cout << "Welcome to the Crate Program." << endl;
     cout << "Enter the crate dimensions." << endl;
 
-    cout << "Crate Length";
+    cout << "Crate Length? ";
     cin >> length;
-    cout << "Crate Width";
+    cout << "Crate Width? ";
     cin >> width;
-    cout << "Crate Height";
+    cout << "Crate Height? ";
     cin>> height;
 
     // Part 3 --  Do the Calculations
