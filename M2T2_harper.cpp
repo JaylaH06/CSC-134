@@ -4,6 +4,7 @@
 // 01-28-26
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -32,6 +33,7 @@ int main() {
     total_price = sub_total + tip_amount + tax_amount;
 
     // Present the output
+    cout << setprecision(2) << fixed;
     cout << endl;
     cout << "YOUR ORDER" << endl << "--------------------" << endl;
     cout << num_meals << " x " << meal_name << "\t$" << meal_price << endl;
