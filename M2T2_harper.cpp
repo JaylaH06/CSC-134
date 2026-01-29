@@ -23,16 +23,22 @@ int main() {
     cout << endl;
     cout << "How many would you like? ";
     cin >> num_meals;
-    cout << "Tip amount? (min 0)? "
+    cout << "Tip amount? (min 0)? ";
+    cin >> tip_amount;
 
     // Do the calculations
     sub_total = meal_price * num_meals;
+    tax_amount = sub_total * tax_rate;
+    total_price = sub_total + tip_amount + tax_amount;
 
     // Present the output
     cout << endl;
     cout << "YOUR ORDER" << endl << "--------------------" << endl;
     cout << num_meals << " x " << meal_name << "\t$" << meal_price << endl;
-    cout << "Subtotal: \t$" << sub_total << endl;
+    cout << "Subtotal: \t\t$" << sub_total << endl;
+    cout << "Tip: \t\t$" << tip_amount << endl;
+    cout << "Tax: \t\t$" << tax_amount << endl;
+    cout << "--------------------" << endl;
 
     return 0;
 }
