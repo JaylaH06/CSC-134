@@ -39,6 +39,8 @@ int main() {
     cout << "Tip: \t\t$" << tip_amount << endl;
     cout << "Tax: \t\t$" << tax_amount << endl;
     cout << "--------------------" << endl;
+    cout << "Total: \t\t$" << total_price << endl;
+    cout << "THANK YOU COME AGAIN <3" << endl;
 
     return 0;
 }
