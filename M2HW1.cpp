@@ -10,5 +10,5 @@ Jayla Harper
 using namespace std;
 
 int main() {
-    
+    cout << "Welcome to the Diamond lounge Bank." << endl;
 }
