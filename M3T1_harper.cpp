@@ -33,4 +33,16 @@ int main() {
     cout << setprecision(2) << fixed;
     cout << "The area is: " << area1 << " Feet " << endl;
     cout << "The area is: " << area2 << " Feet " << endl;
+
+    // Which one is larger?
+    if (area1 > area2) {
+        cout << "The first rectangle is bigger." << endl;
+
+    }
+    if (area2 > area1) {
+        cout << "The second rectangle is bigger." << endl;
+    }
+    if (area1 == area2) {
+        cout << "They are the same size." << endl;
+    }
 }
