@@ -120,5 +120,17 @@ int main() {
 
     cout << "If you were to get " <<  pizza_num << " pizza's with " << pizza_slices << " slices in each and have " << people_coming << " people coming you would have " << slices_left << " slices of pizza left over." << endl;
 
+    cout << "QUESTION 4 " << endl;
+
+    // Fourth Question
+    string school_name = " FTCC";
+    string team_name =  " Trojans ";
+
+    //Output
+    cout << " Let's go " << school_name << endl;
+    cout << " Let's go " << school_name << endl;
+    cout << " Let's go " << school_name << endl;
+    cout << " Let's go " << team_name << endl;
+
 
 }
