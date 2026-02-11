@@ -9,7 +9,12 @@ Jayla Harper
 #include <iomanip>
 using namespace std;
 
+
 int main() {
+
+    cout << "QUESTION 1" << endl;
+
+    // First Question
 
     // Declare all variables
     double start_balance;
@@ -46,8 +51,74 @@ int main() {
     cout << "New Account Balance: " << final_balance << endl;
 
 
+    cout << "QUESTION 2" << endl;
+
+    // Second Question
+
+    // Part 1 -- Declare Variables
+    // Constant Variables (Don't change unless the market changes)
+    const double COST_PER_CUBIC_FOOT = 0.3;
+    const double CHARGE_PER_CUBIC_FOOT = 0.52;
+
+    // Crate variables 
+    double length, width, height, volume; // all  in feet
+    // Money variables
+    double cost, customer_price, profit; // all in $
+
+    // Part 2 -- Get the Input
+    cout << "Welcome to the Crate Program." << endl;
+    cout << "Enter the crate dimensions." << endl;
+
+    cout << "Crate Length? ";
+    cin >> length;
+    cout << "Crate Width? ";
+    cin >> width;
+    cout << "Crate Height? ";
+    cin>> height;
+
+    // Part 3 --  Do the Calculations
+    volume = length * width * height;
+    // Find the cost and the customer_price
+    cost= volume * COST_PER_CUBIC_FOOT;
+    customer_price = volume * CHARGE_PER_CUBIC_FOOT;
+    profit = customer_price - cost;
+
+    // Part 4 -- Print the Output
+    cout << setprecision(2) << fixed;
+    cout << "==== CRATE INFO ====" << endl;
+    cout << "Volume is " << volume << "cubic feet " << endl;
+    cout << "Wholesale price is $" << cost << endl;
+    cout << "Customer price is $" << customer_price << endl;
+    cout << "Profit per crate: $" << profit << endl;
+
+    cout << "QUESTION 3" << endl;
+
+    // Third Question
+
+    // Variables
+    int pizza_num;
+    int pizza_slices;
+    int people_coming;
+    int slices_left;
+    int slices_total;
+
+    // Get input
+    cout << "How many pizza's did you want to order? " << endl;
+    cin >> pizza_num;
+    cout << "How many slices did you want per pizza? " << endl;
+    cin >> pizza_slices;
+    cout << "How many people are coming to the party? " << endl;
+    cin >> people_coming;
+
+    // Do the calculations
+    slices_left = pizza_num * pizza_slices - people_coming;
+    slices_total = pizza_num * pizza_slices;
+    if (slices_total < people_coming) {
+        cout << "You may want to increase your amount of pizza's you don't have enough to feed everyone." << endl;
+    }
+    // Print output
+
+    cout << "If you were to get " <<  pizza_num << " pizza's with " << pizza_slices << " slices in each and have " << people_coming << " people coming you would have " << slices_left << " slices of pizza left over." << endl;
 
 
-
-    return 0;
 }
