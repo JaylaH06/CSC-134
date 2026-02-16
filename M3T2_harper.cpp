@@ -4,6 +4,8 @@
 // 02/16/26
 // Start the game of craps.
 #include <iostream>
+#include <cstdlib> // For random
+#include <ctime> // For time
 using namespace std;
 
 // Function declarations
@@ -12,6 +14,10 @@ int roll();
 
 // Main() goes here
 int main() {
+    // Seed the random number geerator
+    int seed = time(0);
+    srand(seed);
+
     int number = roll();
     cout << "You rolled a " << number << endl;
     return 0;
@@ -20,5 +26,9 @@ int main() {
 // Function definitions
 // (Actually write the entire function.)
 int roll() {
-    return 1; // These dice are loaded.
+    // Rand() gives a large random number
+    // % 6 divides by six, and keeps the remainder
+    // Finally add 1, so it's 1 to 6, not zero to five
+    int my_roll = (rand() % 6) + 1;
+    return my_roll;
 }
