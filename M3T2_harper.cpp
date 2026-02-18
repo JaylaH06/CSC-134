@@ -20,10 +20,30 @@ int main() {
 
     // Roll two dice and show the results
     int first, second, total;
+    string result; // Did we win or lose?
     first = roll();
     second = roll();
     total = first + second;
     cout << "You rolled 🎲 " << first << " + " << second << " = " << total << endl;
+
+    // How did we do? 7 and 11 is win, 2, 3, 12 is lose, anything else is point.
+    if (total == 7) {
+        result = "win";
+    }
+    else if (total == 11) {
+        result = "win";
+    }
+    else if (total == 3) {
+        result = "lose";
+    }
+    else if (total == 12) {
+        result = "lose";
+    }
+    else {
+        // Must be a point roll
+        result = "point";
+    }
+    cout << "ROLL results: " << result << endl;
 
     return 0;
 }
