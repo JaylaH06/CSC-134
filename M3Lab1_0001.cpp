@@ -5,3 +5,9 @@
 
 #include <iostream>
 using namespace std;
+
+int main() {
+    //=========== Function Prototypes ===============
+    // Rooms to Declare
+    
+}
