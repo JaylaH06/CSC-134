@@ -38,15 +38,19 @@ int main() {
 
     if (1 == choice) {
         Bubbly_woowoo_1();
+        cout << " He turns into a butterfly and gets eaten by a crow...You avoid any calls from his grandma for the next 100 years.";
     }
     else if (2 == choice) {
         Sparkly_Wallbanger_2();
+        cout << " His allergies are cured for the entire duration of his visit! You did fantastic!";
     }
     else if (3 == choice) {
          Fuzzy_Navel_3();
+         cout << " He shrinks 6 sizes down...He now wants to sue you for everything you own.";
     }
     else if (4 == choice) {
         Snake_wine_4();
+        cout << " He starts speaking another language! I don't know what he's saying but he sounds mad.";
     }
     else {
         cout << "We couldn't pick up that ingredient...They raised the prices of Spider Eyes." << endl;
