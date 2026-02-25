@@ -17,7 +17,7 @@ int main() {
 
     int choice;
     // main() starts the game
-    cout << "Spell-Check The - Brewing Game 🧙" << endl << endl;
+    cout << "Spell-Check - The Brewing Game 🧙" << endl << endl;
     cout << "You're a lonesome witch that lives in the woods. A 'Coven of One' if you will.";
     cout << " But like any witch you need to make a living, newt tails aren't cheap.";
     cout << " So you make potions for the creatures of the forest to fund your lifestyle.";
