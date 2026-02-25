@@ -18,16 +18,17 @@ int main() {
     int choice;
     // main() starts the game
     cout << "Spell-Check The Brewing Game 🧙" << endl << endl;
-    cout << " You're a lonesome witch that lives in the woods. A 'Coven of One' if you will.";
+    cout << "You're a lonesome witch that lives in the woods. A 'Coven of One' if you will.";
     cout << " But like any witch you need to make a living, newt tails aren't cheap.";
     cout << " So you make potions for the creatures of the forest to fund your lifestyle.";
-    cout << " Todays customer is an Nidhogg who wantss to visit his grandma in the Netherlands.";
-    cout << " The only problem is that Mr. Nidhogg has horrible seasonal allergies and needs something to make the journey there a bit easier on his sinuses.";
-    cout << " I have everything else set up. But for somme reason I can't remember the last ingredient.";
-    cout << " So, I need and I need your help!";
+    cout << " Todays customer is a Nidhogg who wants to visit his grandma in the Netherlands.";
+    cout << " The only problem is that Mr. Nidhogg has horrible seasonal allergies,";
+    cout << " and needs something to make the journey there a bit easier on his sinuses.";
+    cout << " I have everything else set up. But for some reason I can't remember the last ingredient.";
+    cout << " So, I need your help!";
     cout << " There's four different bottles here which one should we use?";
 
-    cout << "Do you: " << endl;
+    cout << " Lets pick: " << endl;
     cout << "1. Bubbly WooWoo" << endl;
     cout << "2. Sparkly WallBanger" << endl;
     cout << "3. Fuzzy Navel" << endl;
@@ -53,9 +54,9 @@ int main() {
         cout << " He starts speaking another language! I don't know what he's saying but he sounds mad.";
     }
     else {
-        cout << "We couldn't pick up that ingredient...They raised the prices of Spider Eyes." << endl;
+        cout << "We couldn't pick up that ingredient they raised the price of Spider Eyes...greedy merchants." << endl;
     }
-    cout << "*Game Over*" << endl << endl;
+    cout << " *GAME OVER*" << endl << endl;
 
     return 0; // End of Game
 }
