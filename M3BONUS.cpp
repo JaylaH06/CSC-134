@@ -7,20 +7,22 @@ M3BONUS
 
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
 // Function Declarations
 
 void showWelcome();
 void showResult(int score);
-bool askQuestion(string question, string correctAnswer);
+void playGame();
+bool askQuestion(string question, string choiceA, string choiceB, string choiceC, string choiceD, int correctNumber);
 
 // Main
 
 int main() {
-    int score = 0;
-
     showWelcome();
+    playGame();
+    return 0;
 
     if (askQuestion("What is the name of Luffy's signature attack?","gum gum pistol")) score++;
     if (askQuestion("What fruit did Luffy eat to get his powers?","gum gum fruit")) score++;
