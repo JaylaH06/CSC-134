@@ -205,6 +205,6 @@ bool playAgain() {
         cout << "⚠️  Invalid choice! Enter y or n." << endl;
 
         //Prompts - Claude asked about my roadmap which really helped.
-        //It guided me through the base of my game and from there claude helped mycome up with cool add-ons like play again and score tracking.
+        //It guided me through the base of my game and from there claude helped me come up with cool add-ons like play again and score tracking.
     }
 }
