@@ -14,16 +14,19 @@ using namespace std;
 void showWelcome();
 void showResult(int score, int total);
 bool askQuestion(string question, string correctAnswer);
+bool askQuestion(string question, string correctAnswer1, string correctAnswer2);
 bool askQuestion(string question, string choiceA, string choiceB, string choiceC, string choiceD, string correctLetter);
 int chooseDifficulty();
+bool playAgain();
 
 // Main
 
 int main() {
-    int score = 0;
-    int total = 5;
-
     showWelcome();
+
+    do {
+        int score = 0;
+        int total = 5;
 
     int difficulty = chooseDifficulty();
 
@@ -31,10 +34,10 @@ int main() {
         // Easy - open answer
         total = 5;
     if (askQuestion("What is the name of Luffy's signature attack?","gum gum pistol")) score++;
-    if (askQuestion("What fruit did Luffy eat to get his powers?","gum gum fruit")) score++;
+    if (askQuestion("What fruit did Luffy eat to get his powers?","gum gum fruit","hito hito no mi")) score++;
     if (askQuestion("Who is the cook of the StrawHat crew?","sanji")) score++;
     if (askQuestion("What is Zoro's goal?","greatest swordsman")) score++;
-    if (askQuestion("What is the name of the StrawHat's ship?","going merry")) score++;
+    if (askQuestion("What is the name of the StrawHat's ship?","thousand sunny")) score++;
 
     } else if (difficulty == 2) {
         // Medium - multiple choice
@@ -55,6 +58,7 @@ int main() {
         "b")) score++;
     } else {
         // Hard - tough multiple choice
+        total = 3;
         if (askQuestion(
             "What is the name of the ancient weapon hidden in Alabasta?",
             "Poseidon", "Pluton", "Uranus", "Neptune",
@@ -70,6 +74,11 @@ int main() {
     }
 
     showResult(score, total);
+
+} while (playAgain());
+
+    cout << "\n⚓ Thanks for playing! Fair winds, nakama!\n" << endl;
+
     return 0;
 }
 
@@ -79,7 +88,6 @@ void showWelcome() {
     cout << "=======================================" << endl;
     cout << " ONE PIECE TRIVIA - Set Sail! 🏴‍☠️ " << endl;
     cout << "=======================================" << endl;
-    cout << "Type your answers in lowercase." << endl;
     cout << "Let's see if you're worthy of the Grand Line!\n" << endl;
 }
 
@@ -110,11 +118,31 @@ bool askQuestion(string question, string correctAnswer) {
     cout << "Your answer: ";
     getline(cin, playerAnswer);
 
+    for (char& c : playerAnswer) c = tolower(c);
+
     if (playerAnswer == correctAnswer) {
         cout << "✅ Correct! Bink's Sake for you!\n" << endl;
         return true;
     } else{
         cout << "❌ Wrong! The answer was: " << correctAnswer << "\n" << endl;
+        return false;
+    }
+}
+
+bool askQuestion(string question, string correctAnswer1, string correctAnswer2) {
+    string playerAnswer;
+
+    cout << "❓ " << question << endl;
+    cout << "Your answer: ";
+    getline(cin, playerAnswer);
+
+    for (char& c : playerAnswer) c = tolower(c);
+
+    if (playerAnswer == correctAnswer1 || playerAnswer == correctAnswer2) {
+        cout << "✅ Correct! Bink's Sake for you!\n" << endl;
+        return true;
+    } else{
+        cout << "❌ Wrong! The answer was: " << correctAnswer1 << "\n" << endl;
         return false;
     }
 }
@@ -153,11 +181,27 @@ void showResult(int score, int total) {
 
     if(score == total) {
         cout << "PERFECT! You're the King of the Pirates! 👑" << endl;
-    } else if (total * 0.6) {
+    } else if (score >= total * 0.6) {
         cout << "Nice! You're a true StrawHat! ⚓" << endl;
     } else if (score >= 1) {
         cout << "Keep watching! The Grand Line awaits...🌊" << endl;
     } else {
         cout << "Did you even watch One Piece? 😅" << endl;
+    }
+}
+
+bool playAgain() {
+    string input;
+
+    while (true) {
+        cout << "\nWould you like to play again? (y/n): ";
+        getline(cin, input);
+
+        for (char& c : input) c = tolower(c);
+
+        if (input == "y") return true;
+        if (input == "n") return false;
+
+        cout << "⚠️ Invalid choice! Enter y or n." << endl;
     }
 }
