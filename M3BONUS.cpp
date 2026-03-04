@@ -107,7 +107,7 @@ int chooseDifficulty() {
             return stoi(input);
         }
 
-        cout << "⚠️ Invalid choice! Enter 1, 2, or 3.\n" << endl;
+        cout << "⚠️  Invalid choice! Enter 1, 2, or 3.\n" << endl;
     }
 }
 
@@ -202,6 +202,9 @@ bool playAgain() {
         if (input == "y") return true;
         if (input == "n") return false;
 
-        cout << "⚠️ Invalid choice! Enter y or n." << endl;
+        cout << "⚠️  Invalid choice! Enter y or n." << endl;
+
+        //Prompts - Claude asked about my roadmap which really helped.
+        //It guided me through the base of my game and from there claude helped mycome up with cool add-ons like play again and score tracking.
     }
 }
