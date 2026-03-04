@@ -15,23 +15,31 @@ void showWelcome();
 void showResult(int score, int total);
 bool askQuestion(string question, string correctAnswer);
 bool askQuestion(string question, string choiceA, string choiceB, string choiceC, string choiceD, string correctLetter);
+int chooseDifficulty();
 
 // Main
 
 int main() {
     int score = 0;
-    int total = 8;
+    int total = 5;
 
     showWelcome();
 
+    int difficulty = chooseDifficulty();
+
+    if (difficulty == 1) {
+        // Easy - open answer
+        total = 5;
     if (askQuestion("What is the name of Luffy's signature attack?","gum gum pistol")) score++;
     if (askQuestion("What fruit did Luffy eat to get his powers?","gum gum fruit")) score++;
     if (askQuestion("Who is the cook of the StrawHat crew?","sanji")) score++;
     if (askQuestion("What is Zoro's goal?","greatest swordsman")) score++;
     if (askQuestion("What is the name of the StrawHat's ship?","going merry")) score++;
 
-    // New multiple choice questions
-    if (askQuestion(
+    } else if (difficulty == 2) {
+        // Medium - multiple choice
+        total = 3;
+        if (askQuestion(
         "What is the name of the sea Luffy grew up near?",
         "East Blue", "West Blue", "North Blue", "South Blue",
         "a")) score++;
@@ -45,6 +53,21 @@ int main() {
         "What is Nami's role on the Straw Hat crew?",
         "Doctor", "Navigator", "Sniper", "Archaeologist",
         "b")) score++;
+    } else {
+        // Hard - tough multiple choice
+        if (askQuestion(
+            "What is the name of the ancient weapon hidden in Alabasta?",
+            "Poseidon", "Pluton", "Uranus", "Neptune",
+            "b")) score++;
+        if (askQuestion(
+            "What was Luffy's bounty after defeating Crocodile?",
+            "30,000,000", "100,000,000", "300,000,000", "150,000,000",
+            "b")) score++;
+        if (askQuestion(
+            "What Haki type lets you sense others' presence and emotions?",
+            "Armament Haki", "Conqueror's Haki", "Observation Haki", "Supreme Haki",
+            "c")) score++;
+    }
 
     showResult(score, total);
     return 0;
@@ -58,6 +81,26 @@ void showWelcome() {
     cout << "=======================================" << endl;
     cout << "Type your answers in lowercase." << endl;
     cout << "Let's see if you're worthy of the Grand Line!\n" << endl;
+}
+
+int chooseDifficulty() {
+    string input;
+
+    while (true) {
+        cout << "Choose your difficulty:" << endl;
+        cout << " 1) Easy - open answer questions" << endl;
+        cout << " 2) Medium - multiple choice" << endl;
+        cout << " 3) Hard - for true nakama only" << endl;
+        cout << " Your choice (1/2/3): ";
+        getline(cin, input);
+
+        if (input == "1" || input == "2" || input == "3") {
+            cout << endl;
+            return stoi(input);
+        }
+
+        cout << "⚠️ Invalid choice! Enter 1, 2, or 3.\n" << endl;
+    }
 }
 
 bool askQuestion(string question, string correctAnswer) {
