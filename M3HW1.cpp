@@ -7,7 +7,10 @@ Jayla Harper
 
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
+
 
 int main() {
 
@@ -215,4 +218,30 @@ cout << "========================================" << endl;
     cout << "  Welcome to your new home, " << name << "!" << endl;
     cout << "========================================" << endl;
 
+    // Question 4
+    cout << "Question 4" << endl;
+
+     int answer;
+    int first, second, total;
+
+    // Seed the random number generator
+    srand(time(0));
+
+    // Generate two random single-digit numbers (0-9)
+    first  = rand() % 10;
+    second = rand() % 10;
+    total  = first + second;
+
+    // Ask the question
+    cout << "What is " << first << " plus " << second << "? " << endl;
+    cin >> answer;
+
+    // Check the answer
+    if (answer == total) {
+        cout << "Correct!" << endl;
+    } else {
+        cout << "Incorrect. The answer was " << total << "." << endl;
+    }
+
+    return 0;
 }
