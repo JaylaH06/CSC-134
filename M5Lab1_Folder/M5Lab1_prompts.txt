@@ -1,0 +1,50 @@
+// Prompt for claude.ai
+
+I want to create a CYOA using this base: #include <iostream> using namespace std;  /* CSC 134 M5LAB1 - Choose Your Own Adventure [name] [date] This template serves as a starting point for your own program. We'll be using void functions to tell a simple story, where the user gets to make choices.  You can fork this template by clicking on the name above, then click the three dots on the top right, and click 'fork repl'. This makes a copy for you to use. */  // Function Prototypes // Any functions you make will need to // be listed here, in this format, at the top. // This is so the compiler knows to save // room for them in the final program. void main_menu(); void choice_front_door(); void choice_back_door(); void choice_go_home(); // TODO: add more choices here  int main() {   cout << "M5LAB1 - Choose Your Own Adventure" << endl;   // load up the main menu   main_menu();   // when we return here, we're done   cout << "Thanks for playing!" << endl;   return 0; // finished with no errors }  void main_menu() {   // Write a simple menu that lets the user choose 1,2, or 3, or 4 to quit.   cout << "Main Menu" << endl;   cout << "You're in front of a spooky old house..." << endl;   cout << "Do you:" << endl;   cout << "1. Try the front door" << endl;   cout << "2. Sneak around back" << endl;   cout << "3. Forget it, and go home" << endl;   cout << "4. [Quit]" << endl;   cout << "Choose: ";   int choice;   cin >> choice;   if (1 == choice) {     choice_front_door();   } else if (2 == choice) {     // call choice 2 here   } else if (3 == choice) {     // call choice 3 here   } else if (4 == choice) {     cout << "Ok, quitting game" << endl;     return; // go back to main()   } else {     cout << "That's not a valid choice, please try again." << endl;     cin.ignore(); // clear the user input     main_menu();  // try again   } }  // FUNCTION DEFINITIONS // OK, we have the prototypes at the top, but // now we have to actually write the functions. // They go here, after main(). void choice_front_door() {   cout << "Try the front door." << endl;   cout << "It's locked. " << endl;   cout << "Do you:" << endl;   cout << "1. Check around back" << endl;   cout << "2. Give up and go home" << endl;   int choice;   cout << "Choose: ";   cin >> choice;   if (1 == choice) {     choice_back_door();   } else if (2 == choice) {     choice_go_home();   } }  void choice_back_door() { cout << "TODO: Write something here" << endl; }  void choice_go_home() { cout << "TODO: Write something here" << endl; }  // any new choices go here-- It is going to be seperated into a header and the c++ file. I want to make a sci-fi convenience store game with multiple branch options.
+
+// Start of the cout texts
+
+// Opening
+
+You currently reside in the Andromeda Galaxy. 2.5 million light years away from your old home in the Milky Way. Moving away for college was a difficult choice, but you don't regret it.
+
+But reminiscing isn't your concern right now it's the grumbling of your stomach that poses a problem. So with a virtually empty stomach you get up from your desk and make your way downstairs and out the door.
+
+The night air is cool and the sky is clear filled to the brim with beautiful stars of all shapes and sizes. It makes for a great mind cleanser after hours of studying for your latest test. Before you realize it you come up to a convenience store it reads: 
+
+*Main Menu Title*
+
+// Main menu
+
+[[Opening]] 
+Enter the store
+
+You enter "Galatic Grab-N-Go." The store is teeming with items from all over the galaxy. Bright colors swarm your vision, basically calling your attention. 
+
+What should you do?
+
+//Browse
+
+[[Main Menu]] 
+
+You decide to browse the store.
+
+it's covered in a wide range of items. From the latest gadgets to the most popular snacks. Seeing all that the store has to offer makes you momentarily forget about your stomach. So much to see and so little time. 
+
+What should you take a look at first?
+
+//Clerk
+
+[[Main Menu]] 
+
+The clerk at the front seems like they'd rather be anywhere but here so, you figure a little bit of conversation wouldn't hurt. You walk up to them their six eyes immediately lock on your figure. 
+
+"Welcome to 'Galatic Grab-N-Go' The best pitstop on this side of the galaxy. How may I help you?" They drawl out boredly.
+
+What do you ask them?
+
+//Leave
+
+[[Main Menu]] 
+
+Looking around the store has so much to offer and the colors blur your vision. It's honestly really overwhelming and after being in a dark room for hours it's way too much. So you turn back around and leave the store needing to take a second to breathe.
