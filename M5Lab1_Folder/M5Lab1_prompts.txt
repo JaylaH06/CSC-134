@@ -47,4 +47,50 @@ What do you ask them?
 
 [[Main Menu]] 
 
-Looking around the store has so much to offer and the colors blur your vision. It's honestly really overwhelming and after being in a dark room for hours it's way too much. So you turn back around and leave the store needing to take a second to breathe.
+Looking around the store the colors begin to blur your vision. It's honestly really overwhelming and after being in a dark room for hours it's way too much. So you turn back around and leave the store needing to take a second to breathe.
+
+// Snacks
+
+[[Browse]] 
+
+You decide to head towards the snack aisle. It's why you went on this little excursion in the first place. Everything looks so good on an empty stomach so you aren't sure what to get at first. Suddenly your eyes lock on two food items.
+
+One is a neon green hot dog with... TOOTHPASTE FLAVORED CONDIMENTS!?!
+
+And the second one is an unassuming can of Corn Crisps. It's a little dented and the drawing on the front is faded around the edges.
+
+Which one do you choose?
+
+// Posioned
+
+[[Snacks]] 
+
+You decide to go with the neon green hotdog. Going up to the counter you get the clerk at the front to ring up your order and he gives you an odd look as he does. 
+
+Walking out the store you take a bite of the hotdog. It's overly moist and minty in all the wrong ways and you regret your choice almost immediately.
+
+Suddeenly your eyes start to water, your stomach flips, and you pass out on the second bite.
+
+// END//
+
+(You were posioned. You were pushing your luck with the second bite...)
+
+// Rich
+
+[[Snacks]] 
+
+You decide to go with the can of Corn Crisps. You grab your purchase and go up to the clerk to get rung up. When you get to the counter there is another customer there speaking to the clerk. He has a monocle on with a long and majestic purple beard. 
+
+His one eye tracks your hand as you place the can on the counter and widens significantly when the entire can is shown completely.
+
+"MADAM I DARE SAY MADAM DO YOU REALIZE WHAT THAT IS?" He practially spits out towards you.
+
+You wipe your face off with a napkin the clerk hands you and shake your head.
+
+"THAT THERE I DARE SAY IS A RARE YEAR 1834 CAN OF CRISPS HAILING FROM THE UNIVERSE OF CRISPCANNINESS! IT'S WORTH MILLIONS AND I JUST HAPPEN TO HAVE A MILLION DOLLARS ON MY PERSON IN EXACT CHANGE. COULD I BUY THAT RARE YEAR 1865 CAN OF CRISPS HAILING FROM THE UNIVERSE OF CRISPCANNINESS FROM YOU?'
+
+I thought it was from the year 1834 not 65?? Ignoring his strange verbiage you agree to his deal and trade him for the crisps for a the money he convenietly had.
+
+// END//
+
+You went out for a late night snack and becaame a millionare...Good for you I guess. You're still kinda hungry though.
