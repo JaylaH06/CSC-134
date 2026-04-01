@@ -94,3 +94,85 @@ I thought it was from the year 1834 not 65?? Ignoring his strange verbiage you a
 // END//
 
 You went out for a late night snack and becaame a millionare...Good for you I guess. You're still kinda hungry though.
+
+// gadgets
+
+[[Browse]] 
+
+You decide to head towards the gadgets setion f the store. A little pit stop wouldn't hurt before you get back to your work.
+
+There is all types of toys and elctronics around this aisle but your eyes immediately land on a sword that looked like it was carved out of a lava lamp. There's liquid floating all around the inside of the blade and the hilt is a gleaming gold.
+
+Looking at the price you can see it would be a bit out of your budget if you get a snack on top of this.
+
+What should you do?
+
+//steal
+
+[[Gadgets]] 
+
+The clerk isn't paying any attention to you so you do one last check around and stuff the sword in the leg of your pants. It's an uncomfortable fit but you got your sword and all you have to do is walk out.
+
+Doing an awkward shuffle towards the front door you feel the sword sliptowards your ankle and you panic grabbing at your pants leg when the blade slide out of your pants leg and hits the ground with a TWANG. Immediately a bright portal opens up under you and you fall striaght through.
+
+// END //
+
+(You are stuck falling through the eternal universe with no way to get out and you didn't even get your snack... Good going klutz.)
+
+// Dont steal
+
+[[Gadgets]] 
+
+You decide to suck it up and go for the sword forgoing your snack. You go up to the clerk prepared to spend money that you have on an item you really don't need. By the time you get to the counter you're honestly questioning whether or not you really want the sword.
+
+The clerk stares at you then the sword and back again a few times with a strange look in his eyes. "Are you sure you want this sword?"
+
+You nod your ead relunctantly. You are already up here might as well buy the thing. When you nod your head at him a bright light shines from his thrid eye temporarily blinding you. When your eye sight clears you see that the clerk at turne into...A GLOWING CASH REGISTER???
+
+"THE SWORD HAS CHOSEN YOU IN DEBT STUDENT...I have no reason why BUT NEEDLESS THE FATE OF THE GALAXY AND THIS STORE NOW LIES IN YOUR HANDS USE THIS SWORD AND YOUR STRENGTH AND KEEP OUR UNIVERSE SAFE FOR THE FORSEEABLE FUTURE!"
+
+// END //
+
+(You were entrusted the universe and ownership of the store. You never actually agreed to any of it but it's okay...You never got your snack though.)
+
+// job
+
+[[Clerk]] 
+
+You ask about the job posting that was taped on the front window of the store. 
+
+"Oh that old thing? The old manager actually put it up before he left three years ago but nobody really pays itany mind. Which is kind of a drag because this place has great benefits. A flexible schedule, dental, health, pet dragon, and car insurance. A 401k and PTO. Were you interested in the job or just asking?"
+
+You decide that you want the job after hearing all the job has to offer. The clerk holds out his hand to seal the deal and get your paper work started. As soon as your hand falls into his hands his head combusts into flame and a demonic voice calls from somwhere in the flames.
+
+"KEHAHAHAHA YOU FOOL YOU HAVE DAMNED YOURSELF TO ETERNAL SERVITUDE TO THIS CONVENIENCE STORE KEHAHAHA *cough* *cough* would you like your paychecks in a stub or direct deposit?"
+
+// END //
+
+(You are forced to work at this convenience store for all of eternity whichisn't too bad your old job didn't have dental care. But your not allowed to eat from the store...So you didn't get your snacks.)
+
+// rumors
+
+[[Clerk]] 
+
+You ask about a fight club that you've heard was held here. The clerk gives you a mean glare and comes from around the corner to get face to face. You didn't realize it because he was sitting but he's at least three heads taller than you are with a ean glare on his face.
+
+"What did you say? Repeat what you just said." He practically yells at you. Before you can get oout the statement again he hits you with a flying uppercut and it's light out almost immediately.
+
+// END //
+
+(We've been over this what's the first rule of fight club? You didn't even get a chance to get your snacks.")
+
+//alley
+
+[[Leave]] 
+
+Walking out of the store and heading into a dim alley you put your hands on your knees and take a second to catch your breath. Suddenly you hear mumbling to your right and being the noisy person you are you peak around the corner to cyborg trying to rob a fellow robot for a pack of ratchets.
+
+"GIVE IT TO ME MAN MY BOLTS NEED TIGHTENING ITS BEEN TO LONG AND YOU TOOK THE LAST PACK!" Knowing this could be the difference between artificial life or the scrapyard you jump into the fray knocking the cybord against the head with a spare tire you found on the ground. He crumples to the ground and the other robot takes that chance to thank you and run for his life clanking away for the scene. 
+
+The clerk chose this time to reveal himself from the side of the store. He adits that he was hiding hoping someone would come to the robots aid. He gives you a soda and a bag of chips for your bravery.
+
+// END //
+
+(You're practically a hero the 'Rust Buster' if you will, and hey look at that you got your snack!)

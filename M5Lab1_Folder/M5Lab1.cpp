@@ -1,11 +1,11 @@
-// adventure.cpp
+// M5LAb1
 // CSC 134 - M5LAB1 Choose Your Own Adventure
 // Galactic Grab-N-Go: A Sci-Fi Convenience Store
 // Jayla Harper
 // 04/01/26
 
 #include <iostream>
-#include "M5Lab.h"
+#include "M5Lab1.h"
 using namespace std;
 
 // ──────────────────────────────────────────────────────────────
@@ -21,12 +21,16 @@ static void bad_choice() {
 //  MAIN MENU
 // ──────────────────────────────────────────────────────────────
 void main_menu() {
+    cout << "You currently reside in the Andromeda Galaxy. 2.5 million light years away from your old home in the Milky Way." << endl; 
+    cout << "Moving away for college was a difficult choice, but you don't regret it." << endl;
+    cout << "But reminiscing isn't your concern right now it's the grumbling of your stomach that poses a problem. So with a virtually empty stomach you get up from your desk and make your way downstairs and out the door." << endl;
+    cout << "The night air is cool and the sky is clear filled to the brim with beautiful stars of all shapes and sizes. It makes for a great mind cleanser after hours of studying for your latest test." << endl; 
+    cout << "Before you realize it you come up to a convenience store it reads: " << endl;
     cout << "\n========================================" << endl;
     cout << " GALACTIC GRAB-N-GO  *  Est. 2347 CE" << endl;
     cout << "========================================" << endl;
-    cout << "You step off the transport shuttle and duck" << endl;
-    cout << "into the nearest convenience store to escape" << endl;
-    cout << "the acid rain. Neon signs flicker overhead." << endl;
+    cout << "You enter " << "Galatic Grab-N-Go." << "The store is teeming with items from all over the galaxy. Bright colors swarm your vision, basically calling your attention." << endl; 
+    cout << "What should you do?" << endl;
     cout << "\nDo you:" << endl;
     cout << "  1. Browse the shelves" << endl;
     cout << "  2. Talk to the alien clerk" << endl;
@@ -49,11 +53,12 @@ void main_menu() {
 // ──────────────────────────────────────────────────────────────
 void choice_browse() {
     cout << "\n-- SHELVES --" << endl;
-    cout << "The aisles stretch back further than the store" << endl;
-    cout << "should physically allow. Weird." << endl;
+    cout << "You decide to browse the store. It's covered in a wide range of items. From the latest gadgets to the most popular snacks." << endl; 
+    cout << "Seeing all that the store has to offer makes you momentarily forget about your stomach. So much to see and so little time." << endl; 
+    cout << "What should you take a look at first?" << endl;
     cout << "\nDo you head to the:" << endl;
     cout << "  1. Snack aisle (lots of unlabeled pouches)" << endl;
-    cout << "  2. Gadget display case near the register" << endl;
+    cout << "  2. Gadget display case" << endl;
     cout << "Choose: ";
 
     int choice;
