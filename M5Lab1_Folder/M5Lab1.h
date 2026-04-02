@@ -19,19 +19,16 @@ void choice_leave();        // 3. Leave the store
 void choice_snacks();       // 1a. Alien snacks aisle
 void choice_gadgets();      // 1b. Gadget display case 
 
-// ── Level 2 – Clerk path ───────────────────────────────────
-void choice_job();          // 2a. Ask for a job
-void choice_rumor();        // 2b. Ask about the back-room rumors
+// ── Level 2 – Clerk path ───────────────────────────────────       // 2b. Ask about the back-room rumors
 
 // ── Level 2 – Leave path ───────────────────────────────────
-void choice_alley();        // 3a. Investigate the dark alley
 
 // ── Endings ────────────────────────────────────────────────
 void end_poisoned();
 void end_snack_rich();
-void end_hired();
-void end_beatup();
-void end_hero();
+void end_job();
+void end_rumor();
+void end_alley();
 void end_steal();
 void end_dont_steal();
 
