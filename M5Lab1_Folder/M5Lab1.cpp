@@ -8,6 +8,13 @@
 #include "M5Lab1.h"
 using namespace std;
 
+int main () {
+    cout << "M5LAB1 - Choose Your Own Adventure" << endl;
+    main_menu();
+    cout << "\nThanks for playing!" << endl;
+    return 0;
+}
+
 // ──────────────────────────────────────────────────────────────
 //  HELPER: clears bad input and re-prompts
 // ──────────────────────────────────────────────────────────────
@@ -143,10 +150,7 @@ void choice_gadgets() {
     cin >> choice;
 
     if      (1 == choice) { end_steal(); }
-    else if (2 == choice) {
-        cout << "\nSmart call. You go back to browsing." << endl;
-        choice_browse();
-    }
+    else if (2 == choice) { end_dont_steal(); }
     else { bad_choice(); choice_gadgets(); }
 }
 

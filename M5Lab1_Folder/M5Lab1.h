@@ -4,8 +4,8 @@
 // Jayla Harper
 // 04/01/26
 
-#ifndef ADVENTURE_H
-#define ADVENTURE_H
+#ifndef M5LAB1_H
+#define M5LAB1_H
 
 // ── Main menu ──────────────────────────────────────────────
 void main_menu();
