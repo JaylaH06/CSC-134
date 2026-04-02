@@ -30,13 +30,15 @@ static void bad_choice() {
 void main_menu() {
     cout << "You currently reside in the Andromeda Galaxy. 2.5 million light years away from your old home in the Milky Way." << endl; 
     cout << "Moving away for college was a difficult choice, but you don't regret it." << endl;
-    cout << "But reminiscing isn't your concern right now it's the grumbling of your stomach that poses a problem. So with a virtually empty stomach you get up from your desk and make your way downstairs and out the door." << endl;
-    cout << "The night air is cool and the sky is clear filled to the brim with beautiful stars of all shapes and sizes. It makes for a great mind cleanser after hours of studying for your latest test." << endl; 
+    cout << "But reminiscing isn't your concern right now it's the grumbling of your stomach that poses a problem." << endl; 
+    cout << "So with a virtually empty stomach you get up from your desk and make your way downstairs and out the door." << endl;
+    cout << "The night air is cool and the sky is clear filled to the brim with beautiful stars of all shapes and sizes." << endl; 
+    cout << "It makes for a great mind cleanser after hours of studying for your latest test." << endl; 
     cout << "Before you realize it you come up to a convenience store it reads: " << endl;
     cout << "\n========================================" << endl;
     cout << " GALACTIC GRAB-N-GO  *  Est. 2347 CE" << endl;
     cout << "========================================" << endl;
-    cout << "You enter " << "Galatic Grab-N-Go." << "The store is teeming with items from all over the galaxy. Bright colors swarm your vision, basically calling your attention." << endl; 
+    cout << "You enter " << "Galatic Grab-N-Go." << " The store is teeming with items from all over the galaxy. Bright colors swarm your vision, basically calling your attention." << endl; 
     cout << "What should you do?" << endl;
     cout << "\nDo you:" << endl;
     cout << "  1. Browse the shelves" << endl;
@@ -177,10 +179,9 @@ void end_job() {
     cout << "'Were you interested in the job or just asking?'" << endl;
     cout << "You decide that you want the job after hearing all the job has to offer. The clerk holds out his hand to seal the deal and get your paper work started." << endl; 
     cout << "As soon as your hands make contact his head combusts into flame and a demonic voice calls from somwhere in the flames." << endl;
-    cout << "KEHAHAHAHA YOU FOOL YOU HAVE DAMNED YOURSELF TO ETERNAL SERVITUDE TO THIS CONVENIENCE STORE KEHAHAHA *cough* *cough* would you like your paychecks in a stub or direct deposit?" << endl;
-    cout << "\n[GAME OVER - Bad Ending]" << endl;
-    cout << "(Eternal servitude. Not the worst gig -- great dental." << endl;
-    cout << " But you're not allowed to eat from the store..." << endl;
+    cout << "'KEHAHAHAHA YOU FOOL YOU HAVE DAMNED YOURSELF TO ETERNAL SERVITUDE TO THIS CONVENIENCE STORE KEHAHAHA *cough* *cough* would you like your paychecks in a stub or direct deposit?'" << endl;
+    cout << "\n[GAME OVER - Decent Ending]" << endl;
+    cout << "(Eternal servitude. Not the worst gig -- great dental. But you're not allowed to eat from the store..." << endl;
     cout << " So you didn't get your snack.)" << endl;
 
 }
@@ -192,9 +193,7 @@ void end_rumor() {
     cout << "'What did you say? Repeat what you just said.'" << endl; 
     cout << "He practically yells at you. Before you can get out the statement again he hits you with a flying uppercut and it's light out almost immediately." << endl;
     cout << "\n[GAME OVER - Bad Ending]" << endl;
-    cout << "(We've been over this -- what's the first rule of" << endl;
-    cout << " fight club? You didn't even get a chance to" << endl;
-    cout << " get your snack.)" << endl;
+    cout << "(We've been over this -- what's the first rule of fight club? You didn't even get a chance to get your snack.)" << endl;
 }
 
 // ──────────────────────────────────────────────────────────────
@@ -204,10 +203,11 @@ void end_alley() {
     cout << "\n-- THE ALLEY --" << endl;
     cout << "Walking out of the store and heading into a dim alley you put your hands on your knees and take a second to catch your breath." << endl; 
     cout << "Suddenly you hear mumbling to your right and being the noisy person you are you peak around the corner to cyborg trying to rob a fellow robot for a pack of ratchets." << endl;
-    cout << "'GIVE IT TO ME MAN MY BOLTS NEED TIGHTENING ITS BEEN TO LONG AND YOU TOOK THE LAST PACK!'" << endl; 
-    cout << "Knowing this could be the difference between artificial life or the scrapyard you jump into the fray knocking the cybord against the head with a spare tire you found on the ground." << endl; 
-    cout << "He crumples to the ground and the other robot takes that chance to thank you and run for his life clanking away for the scene." << endl;
-    cout << "The clerk chose this time to reveal himself from the side of the store. He adits that he was hiding hoping someone would come to the robots aid." << endl; 
+    cout << "'GIVE IT TO ME MAN MY BOLTS NEED TIGHTENING ITS BEEN TOO LONG AND YOU TOOK THE LAST PACK!'" << endl; 
+    cout << "Knowing this could be the difference between artificial life or the scrap yard you jump into the fray knocking the cyborg against the head" << endl; 
+    cout << "with a spare tire you found." << endl; 
+    cout << "He crumples to the ground and the other robot takes that chance to thank you and run for his life clanking away from the scene." << endl;
+    cout << "The clerk chooses this time to reveal himself from the side of the store. He admits that he was hiding hoping someone would come to the robots aid." << endl; 
     cout << "He gives you a soda and a bag of chips for your bravery." << endl;
     cout << "\n[GAME OVER - Good Ending]" << endl;
     cout << "(You're practically a hero -- the 'Rust Buster' if you" << endl;
@@ -220,7 +220,8 @@ void end_alley() {
 void end_poisoned() {
     cout << "You decide to go with the neon green hotdog. Going up to the counter you get the clerk at the front to ring up your order and he gives you an odd look as he does." << endl; 
     cout << "Walking out the store you take a bite of the hotdog. It's overly moist and minty in all the wrong ways and you regret your choice almost immediately." << endl;
-    cout << "Suddenly your eyes start to water, your stomach flips, and you pass out on the second bite." << endl;
+    cout << "You take another bite." << endl;
+    cout << "Suddenly your eyes start to water, your stomach flips, and you pass out." << endl;
     cout << "\n*** ENDING: WRONG SNACK ***" << endl;
     cout << "(You were posioned. You were pushing your luck with the second bite...)" << endl;
     cout << "\n[GAME OVER - Bad Ending]" << endl;
@@ -232,11 +233,12 @@ void end_snack_rich() {
     cout << "His one eye tracks your hand as you place the can on the counter and widens significantly when the entire can is shown completely." << endl;
     cout << "'MADAM I DARE SAY MADAM DO YOU REALIZE WHAT THAT IS?'" << endl; 
     cout << "He practially spits out towards you. You wipe your face off with a napkin the clerk hands you and shake your head." << endl;
-    cout << "'THAT THERE I DARE SAY IS A RARE YEAR 1834 CAN OF CRISPS HAILING FROM THE UNIVERSE OF CRISPCANNINESS! IT'S WORTH MILLIONS AND I JUST HAPPEN TO HAVE A MILLION DOLLARS ON MY PERSON IN EXACT CHANGE.'" << endl; 
+    cout << "'THAT THERE I DARE SAY IS A RARE YEAR 1834 CAN OF CRISPS HAILING FROM THE UNIVERSE OF CRISPCANNINESS!'" << endl; 
+    cout << "'IT'S WORTH MILLIONS AND I JUST HAPPEN TO HAVE A MILLION DOLLARS ON MY PERSON IN EXACT CHANGE.'" << endl; 
     cout << "'COULD I BUY THAT RARE YEAR 1865 CAN OF CRISPS HAILING FROM THE UNIVERSE OF CRISPCANNINESS FROM YOU?'" << endl;
-    cout << "Ignoring his strange verbiage you agree to his deal and trade him for the crisps for a the money he convenietly had." << endl;
+    cout << "Ignoring his strange verbiage you agree to his deal and trade him the crisps for a the money he convenietly had." << endl;
     cout << "\n*** ENDING: RARE FIND ***" << endl;
-    cout << "You went out for a late night snack and becaame a millionare...Good for you I guess. You're still kinda hungry though." << endl;
+    cout << "You went out for a late night snack and became a millionare...Good for you I guess. You're still kinda hungry though." << endl;
     cout << "\n[GAME OVER - Decent Ending]" << endl;
 }
 
