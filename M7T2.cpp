@@ -43,17 +43,21 @@ double Rectangle::getArea() const {
 
 int main() {
     Rectangle box;
-    double rectwidth;
+    double rectWidth;
     double rectLength;
 
-    cout << "This program will calculate the area of a rectangle."
-    cout << "What is the width?";
+    cout << "This program will calculate the area of a rectangle.\n";
+    cout << "What is the width? ";
     cin >> rectWidth;
-    cout << "What is the length?";
+    cout << "What is the length? ";
     cin >> rectLength;
 
     box.setWidth(rectWidth);
     box.setLength(rectLength);
 
-    cout 
+    cout << "Here is the rectangle's data:\n";
+    cout << "Width: " << box.getWidth() << endl;
+    cout << "Length: " << box.getLength() << endl;
+    cout << "Area: " << box.getArea() << endl;
+    return 0;
 }
