@@ -146,7 +146,7 @@ void displayBoard(const std::vector<Category>& board, const std::vector<Player>&
     // Title
     std::cout << "\n";
     std::cout << "  ╔══════════════════════════════════════════════════════════╗\n";
-    std::cout << "  ║            🎌  A N I M E  J E O P A R D Y  🎌             ║\n";
+    std::cout << "  ║            🎌  A N I M E  J E O P A R D Y  🎌           ║\n";
     std::cout << "  ╚══════════════════════════════════════════════════════════╝\n\n";
 
     // Category headers
@@ -212,7 +212,7 @@ std::vector<Player> setupPlayers() {
 //  Timer
 // ─────────────────────────────────────────────
 
-
+// Shared flags between main thread and timer thread
 std::atomic<bool> timerExpired(false);
 std::atomic<bool> answerReceived(false);
 
@@ -222,6 +222,7 @@ void timerThread(int seconds) {
     for (int i = seconds; i > 0; i--) {
         if (answerReceived.load()) return;
 
+        // Move cursor to saved position and reprint the countdown line
         std::cout << "\033[s";          // save cursor
         // Print on a dedicated line below the prompt (we'll position it)
         std::cout << "\r  \033[2K";     // clear current line
@@ -235,7 +236,8 @@ void timerThread(int seconds) {
 
     if (!answerReceived.load()) {
         timerExpired.store(true);
-        // Interrupt blocking getline by sending a newline
+        // Interrupt blocking getline by sending a newline to stdin
+        // This is a POSIX approach — works on Linux/macOS
         std::cout << "\n\n  ⌛  Time's up! Moving on...\n";
         std::cout.flush();
         // Write a newline to stdin so getline unblocks
