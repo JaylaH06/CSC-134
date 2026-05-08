@@ -1,0 +1,95 @@
+Could I add a timer per question
+
+8:41 PM
+Claude responded: Sure!
+Sure! Here's how it works at a high level before we dive in:
+
+The timer will run on a separate thread using <thread> and <chrono> from the C++ standard library. While the player is typing their answer, a countdown ticks in the background. If time runs out before they answer, it automatically marks the question as wrong.
+
+A couple of quick questions first:
+
+You said: Q: How many seconds should players have to answer?
+Q: How many seconds should players have to answer?
+A: 30 seconds
+
+Q: What should happen when time runs out?
+A: No points lost, just skip
+
+8:41 PM
+Claude responded: Perfect!
+Perfect! Let me update the game with a 30-second timer that simply skips the question (no penalty) when time runs out.
+
+
+Read the current game file
+Read the current game file
+Now I'll update the file with the timer logic — a background thread counts down 30 seconds while the player types, and if time expires the question is simply skipped with no penalty.
+
+
+Edited 3 files
+Edited 3 files
+Now update the rules text in main() to mention the timer:
+
+
+Update rules to mention timer
+Update rules to mention timer
+Let me do a quick sanity check on the final file:
+
+
+Check if network is available to compile
+Check if network is available to compile
+Good catch — pause() conflicts with a POSIX function now that we're including <csignal>. Easy fix: rename it to waitForEnter().
+
+
+Ran 2 commands
+Ran 2 commands
+Clean compile. Let's present the updated file:
+
+
+Presented file
+Presented file
+The timer is live! Here's what changed and how it works:
+
+How the timer works:
+
+When a question appears, a background thread launches and counts down from 30
+Every second it updates a ⏱ Time remaining: Xs display above the input prompt
+Two std::atomic<bool> flags (timerExpired, answerReceived) let the threads communicate safely without race conditions
+If the player answers in time, answerReceived is set → the timer thread exits cleanly
+If 30 seconds pass first, the thread sends SIGALRM to the process, which interrupts the blocking std::getline call → the question is skipped with no penalty
+
+
+what is include <atomic>
+
+1:28 PM
+Claude responded: #include <atomic> gives you access to atomic types from the C++ standard library — specifically the std::atomic<T> template.
+#include <atomic> gives you access to atomic types from the C++ standard library — specifically the std::atomic<T> template.
+
+The problem it solves:
+
+In your Jeopardy game, two threads run at the same time — the main thread waiting for player input, and the timer thread counting down. Both threads read and write shared variables like timerExpired and answerReceived. Without protection, this causes a race condition: both threads could try to read/write the variable at the exact same moment, leading to unpredictable behavior or crashes.
+
+What std::atomic does:
+
+It guarantees that reads and writes to that variable are indivisible — no thread can see a half-updated value, and no two threads can modify it simultaneously. In your code:
+
+cpp
+std::atomic<bool> timerExpired(false);
+std::atomic<bool> answerReceived(false);
+These two booleans can safely be read and written from both threads at the same time. When the timer thread does:
+
+cpp
+timerExpired.store(true);
+
+
+When the game starts, it asks how many players (3 or 4) and collects each player's name:
+cppstd::vector<Player> players(numPlayers);
+for (int i = 0; i < numPlayers; i++) {
+    std::cout << "Enter name for Player " << (i + 1) << ": ";
+    std::getline(std::cin, players[i].name);
+}
+Each Player is a simple struct holding a name and a score, stored in a std::vector.
+During the game, players rotate turns using a single index variable:
+cppint currentPlayer = 0;
+// ...after each question:
+currentPlayer = (currentPlayer + 1) % players.size();
+The % (modulo) operator wraps the index back to 0 after the last player, so turns cycle endlessly: Player 1 → 2 → 3 → 1 → 2 → 3...

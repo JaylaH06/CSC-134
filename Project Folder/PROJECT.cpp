@@ -222,13 +222,12 @@ void timerThread(int seconds) {
     for (int i = seconds; i > 0; i--) {
         if (answerReceived.load()) return;
 
-        // Move cursor to saved position and reprint the countdown line
+        
         std::cout << "\033[s";          // save cursor
-        // Print on a dedicated line below the prompt (we'll position it)
         std::cout << "\r  \033[2K";     // clear current line
         std::cout << "  ⏱  Time remaining: " << std::setw(2) << i << "s   ";
         std::cout.flush();
-        std::cout << "\033[u";          // restore cursor (back to input line)
+        std::cout << "\033[u";          // restore cursor
         std::cout.flush();
 
         std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -237,16 +236,15 @@ void timerThread(int seconds) {
     if (!answerReceived.load()) {
         timerExpired.store(true);
         // Interrupt blocking getline by sending a newline to stdin
-        // This is a POSIX approach — works on Linux/macOS
         std::cout << "\n\n  ⌛  Time's up! Moving on...\n";
         std::cout.flush();
         // Write a newline to stdin so getline unblocks
-        kill(getpid(), SIGALRM); // signal ourselves — caught below
+        kill(getpid(), SIGALRM); 
     }
 }
 
 // ─────────────────────────────────────────────
-//  Play a Single Question
+//  Single Question
 // ─────────────────────────────────────────────
 
 void playQuestion(Question& q, std::vector<Player>& players, int currentPlayer) {
@@ -255,7 +253,7 @@ void playQuestion(Question& q, std::vector<Player>& players, int currentPlayer) 
     std::cout << "  │  $" << std::left << std::setw(46) << q.points << "│\n";
     std::cout << "  ├─────────────────────────────────────────────────┤\n";
 
-    // Word-wrap the clue at ~48 chars
+    // Word-wrap the clue
     std::string clue = q.clue;
     std::cout << "  │  ";
     int lineLen = 0;
@@ -274,11 +272,11 @@ void playQuestion(Question& q, std::vector<Player>& players, int currentPlayer) 
     timerExpired.store(false);
     answerReceived.store(false);
 
-    // Install a no-op SIGALRM handler so the signal interrupts getline
+    
     struct sigaction sa{};
-    sa.sa_handler = [](int) {};  // no-op: just interrupt the syscall
+    sa.sa_handler = [](int) {};  
     sigemptyset(&sa.sa_mask);
-    sa.sa_flags = 0;             // do NOT restart interrupted syscalls
+    sa.sa_flags = 0;             
     sigaction(SIGALRM, &sa, nullptr);
 
     // Print countdown line, then prompt on the next line
@@ -287,16 +285,16 @@ void playQuestion(Question& q, std::vector<Player>& players, int currentPlayer) 
               << ", your answer (phrase it as 'What is...'): ";
     std::cout.flush();
 
-    // Launch countdown thread
+    // Countdown thread
     std::thread timer(timerThread, QUESTION_TIME_SECONDS);
 
-    // Block waiting for player input
+    // Wait for player input
     std::string answer;
     if (std::getline(std::cin, answer)) {
         // Player typed something before time ran out
         answerReceived.store(true);
     } else {
-        // getline was interrupted by SIGALRM (time expired)
+        // Time expired
         std::cin.clear();
         answerReceived.store(true); // stop the thread
     }
@@ -408,7 +406,7 @@ int main() {
             std::cin >> catChoice;
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
-        catChoice--; // 0-indexed
+        catChoice--; 
 
         // Choose point value
         std::cout << "  Choose a value (";
